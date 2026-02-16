@@ -1,0 +1,172 @@
+.social-section {
+  padding: 80px 0;
+   background: url('/public/gallery/floral2.jpg') center/cover;
+  text-align: center;
+}
+
+.social-title {
+
+  font-size: 3.5rem;
+  color: var(--maroon);
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.social-subtitle {
+  font-size: 1.2rem;
+  color: #0c0808ff;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+
+/* Social Grid */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+/* Social Card */
+.social-card {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: var(--social-color);
+  transition: height 0.4s ease;
+  z-index: 0;
+}
+
+.social-card:hover::before {
+  height: 100%;
+}
+
+.social-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  border-color: var(--social-color);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon */
+.social-icon-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--social-color), var(--gold));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.social-card:hover .social-icon-wrapper {
+  background: white;
+  transform: rotate(360deg) scale(1.1);
+}
+
+.social-icon {
+  font-size: 3rem;
+}
+
+/* Social Name */
+.social-name {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.social-card:hover .social-name {
+  color: white;
+}
+
+/* CTA */
+.social-cta {
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+  color: var(--social-color);
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.social-card:hover .social-cta {
+  color: white;
+}
+
+/* Hashtag */
+.social-hashtag {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.social-hashtag p {
+  color: var(--gold);
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .social-title {
+    font-size: 2.5rem;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .social-card {
+    padding: 30px 15px;
+  }
+
+  .social-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,248 @@
+.footer {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* Footer Content */
+.footer-content {
+  padding: 60px 0 40px;
+  border-top: 3px solid var(--gold);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* Column Styles */
+.footer-col h3 {
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.footer-col p {
+  line-height: 1.8;
+  color: var(--light-gray);
+  font-size: 0.95rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a {
+  color: var(--light-gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: var(--gold);
+}
+
+/* Main Footer Column with Tagline */
+.footer-main {
+  grid-column: span 1;
+}
+
+/* Animated Tagline - HORIZONTAL */
+.footer-tagline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: 'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+/* Animated Words */
+.tagline-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tagline-word.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Color each word with MAROON and GOLD */
+.tagline-word:nth-child(1) { /* Aesthetic */
+  color: var(--maroon);
+}
+
+.tagline-word:nth-child(2) { /* Moments */
+  color: var(--gold);
+}
+
+.tagline-word:nth-child(3) { /* Competently */
+  color: var(--maroon);
+}
+
+.tagline-word:nth-child(4) { /* Crafted */
+  color: var(--gold);
+}
+
+.tagline-word:nth-child(5) { /* In Excellence */
+  color: var(--maroon);
+}
+
+.tagline-word:nth-child(6) { /* Unforgettable */
+  color: var(--gold);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Social Links */
+.social-links a {
+  color: var(--light-gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--gold);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid var(--dark-gray);
+  padding: 25px 0;
+  text-align: center;
+  color: var(--light-gray);
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .footer-main {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-main {
+    grid-column: span 1;
+  }
+
+  .footer-tagline {
+    font-size: 1.4rem;
+    gap: 8px;
+  }
+
+  .tagline-word:nth-child(6) {
+    font-size: 1.6rem;
+  }
+
+  .footer-content {
+    padding: 40px 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-tagline {
+    font-size: 1.2rem;
+  }
+
+  .tagline-word:nth-child(6) {
+    font-size: 1.4rem;
+  }
+}
+/* Clickable Contact Links */
+.contact-link {
+  color: var(--light-gray);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  color: var(--gold);
+  transform: translateX(5px);
+}
+
+/* WhatsApp Link Special Style */
+.whatsapp-link {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.whatsapp-link:hover {
+  color: #25D366; /* WhatsApp green */
+  transform: scale(1.05);
+}
+
+/* Social Links Styling */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-links a {
+  color: var(--light-gray);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 0.95rem;
+}
+
+.social-links a:hover {
+  color: var(--gold);
+}
+/* Horizontal Contact List */
+.contact-list-horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-list-horizontal li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.contact-list-horizontal li::before {
+  content: '•';
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Mobile - keep vertical */
+@media (max-width: 768px) {
+  .contact-list-horizontal {
+    flex-direction: column;
+  }
+}

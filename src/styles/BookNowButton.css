@@ -1,0 +1,73 @@
+/* Floating Book Now Button */
+.book-now-float {
+  position: fixed;
+  bottom: 110px; /* Above WhatsApp button */
+  right: 30px;
+  background: var(--maroon);
+  color: var(--gold);
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 5px 20px rgba(128, 0, 32, 0.5);
+  z-index: 9999;
+  transition: all 0.3s ease;
+  animation: floatBounceBook 2s ease-in-out infinite;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.book-now-float:hover {
+  background: var(--gold);
+  color: var(--maroon);
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.7);
+}
+
+.book-now-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Pulse Ring */
+.pulse-ring-book {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--maroon);
+  border-radius: 50px;
+  animation: pulseBook 1.5s ease-out infinite;
+}
+
+@keyframes pulseBook {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes floatBounceBook {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .book-now-float {
+    bottom: 95px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}

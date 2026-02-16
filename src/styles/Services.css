@@ -1,0 +1,830 @@
+
+/* Hero Section */
+.services-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+  background-image: url('/public/about.jpg');
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.services-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.85) 100%);
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  animation: bounce 2s infinite;
+  color: var(--gold);
+  cursor: pointer;
+}
+
+.hero-scroll span {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scroll-arrow {
+  font-size: 2rem;
+}
+
+.services-hero .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.page-title {
+  
+  font-style: normal;
+  font-size: 3.5rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.services-hero-subtitle {
+  font-family: serif;
+  font-size: 1.5rem;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.8rem;
+  color: #8B0000;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  font-family: serif;
+  text-align: center;
+  margin-bottom: 50px;
+   font-family: serif;
+  font-size: 1.5rem;
+  color: black;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* What Makes Us Special Section */
+.special-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.special-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.special-card {
+  background: var(--gold);;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid var(--gold);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
+}
+
+.special-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+  border-color: #8B0000;
+}
+
+.special-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.special-card h3 {
+  font-family:  serif;
+  font-size: 1.4rem;
+  color: #8B0000;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.special-card p {
+  line-height: 1.6;
+  font-family:  serif;
+  font-size:  1.5rem;
+  color: black;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Services Grid Section */
+.services-grid-section {
+
+  padding: 80px 0;
+  background: url('/public/gallery/couple.jpg') center/cover;
+  border-radius: 20px;
+  position: relative;
+}
+
+.services-grid-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 215, 0, 0.02) 10px,
+      rgba(255, 215, 0, 0.02) 20px
+    );
+  pointer-events: none;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid var(--gold);;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+  transition: all 0.4s ease;
+  padding: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+  border-color: #8B0000;
+}
+
+.service-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.1);
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(139, 0, 0, 0.95) 0%, transparent 100%);
+  padding: 20px;
+  display: flex;
+}
+
+.service-overlay h3 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 700;
+  color: var(--gold);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  letter-spacing: 1px;
+}
+
+.service-content {
+  padding: 25px;
+}
+
+.service-desc {
+  font-family: italic;
+  color: #0f0202ff;
+  line-height: 2;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.service-price {
+  font-style: normal;
+  color: #8B0000;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.service-features {
+  margin-bottom: 20px;
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.service-features.expanded {
+  max-height: 600px;
+}
+
+.service-features h4 {
+  font-family: serif;
+  color: #310101ff;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.service-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-features li {
+  font-family: serif;
+  color: #b31e1eff;
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight:500;
+}
+
+.service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.see-more-btn {
+  background: linear-gradient(var(--gold));
+  color: #8B0000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.see-more-btn:hover {
+  background: linear-gradient(135deg, #8B0000 0%, #A52A2A 100%);
+  color: var(--gold);
+  
+}
+
+.see-more-btn span {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.see-more-btn span.rotate {
+  transform: rotate(180deg);
+}
+
+/* Beautiful Icon Wrapper */
+.service-icon-wrapper {
+  position: static;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+  z-index: 3;
+  background: white;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border: 4px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.packages-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.package-card {
+  background: white;
+  border-radius: 15px;
+  border: 3px solid var(--package-color);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  padding: 20 20 30;
+}
+
+.package-card.popular {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.package-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.package-card.popular:hover {
+  transform: translateY(-10px) scale(1.07);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: #8B0000;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-family: 'Dancing Script', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.package-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid var(--package-color);
+}
+
+.package-header h3 {
+  font-family:  serif;
+  font-size: 3rem;
+  color: var(--package-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.package-tagline {
+  font-family: serif;
+  color: #8B0000;
+  font-weight: 1000;
+  font-size: 11.1rem;
+  margin-bottom: 15px;
+}
+
+.package-price {
+  font-family: serif;
+  font-size: 1.3rem;
+  color: #070101ff;
+  font-weight: 1000;
+}
+
+.package-features {
+  margin-bottom: 25px;
+  max-height: 220px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.package-features.expanded {
+  max-height: 600px;
+}
+
+.package-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.package-features li {
+  font-family: serif;
+  color: #050101ff;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-weight: 1000;
+}
+
+.check-icon {
+  color: var(--package-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.package-see-more {
+  background: transparent;
+  color: var(--package-color);
+  border: 2px solid var(--package-color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: 'Dancing Script', serif;
+  font-weight: 1000;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.package-see-more:hover {
+  background: var(--package-color);
+  color: white;
+}
+
+.package-see-more span {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.package-see-more span.rotate {
+  transform: rotate(180deg);
+}
+
+.package-btn {
+  display: block;
+  background: linear-gradient(135deg, var(--package-color) 0%, var(--package-color) 100%);
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-family: 'Dancing Script', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.package-btn:hover {
+  background: linear-gradient(135deg, #8B0000 0%, #A52A2A 100%);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Add-ons Section */
+.addons-section {
+  padding: 80px 0;
+  background: url('/public/gallery/wedding2.jpg') center/cover;
+  border-radius: 10px;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.addon-card {
+  background: maroon;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 5px solid var(--gold);;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.addon-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+  border-left-color: #8B0000;
+}
+
+.addon-card h3 {
+  font-family: serif;
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.addon-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.addon-card li {
+  font-family: serif;
+  color: gold;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  
+}
+
+.addon-bullet {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+/* Process Section */
+.process-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.process-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  border-radius: 15px;
+  border: 2px solid #FFD700;
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+  border-color: #8B0000;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(var(--gold));
+  color: #8B0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Great Vibes', 'Dancing Script', cursive";
+  font-style: normal;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.process-step h3 {
+  font-family:  serif;
+  font-size: 2.2rem;
+  color: #8B0000;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.process-step p {
+  font-family: italic;
+  color: #110101ff;
+  line-height: 1;
+  font-size: 2rem;
+}
+
+.process-arrow {
+  font-size: 2rem;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* CTA Section */
+.services-cta {
+  padding: 80px 0;
+  background:  #5C0016;
+  text-align: center;
+  color: white;
+}
+
+.services-cta h2 {
+  font-family: 'Dancing Script', 'Great Vibes' serif;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--gold);;
+}
+
+.services-cta p {
+  font-family: serif;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: 'Dancing Script', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background: linear-gradient(var(--gold));
+  color: #8B0000;
+  border: 2px solid var(--gold);
+}
+
+.btn-primary:hover {
+  background: white;
+  color: #8B0000;
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+}
+
+.btn-large {
+  padding: 18px 50px;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .services-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .special-grid,
+  .services-grid,
+  .packages-grid,
+  .addons-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .package-card.popular {
+    transform: scale(1);
+  }
+
+  .process-steps {
+    flex-direction: column;
+  }
+
+  .process-arrow {
+    transform: rotate(90deg);
+  }
+
+  .services-cta h2 {
+    font-size: 2rem;
+  }
+
+  .services-cta p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-hero {
+    height: 50vh;
+  }
+
+  .services-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+}
+/* ========================================
+   CURSIVE STYLING FOR SPECIFIC ELEMENTS
+======================================== */
+
+/* Service Card Titles - Cursive */
+.service-overlay h3,
+.service-card h3 {
+  font-family: "Great Vibes", "Dancing Script", cursive !important;
+  font-weight: 400 !important;
+  font-size: 2.5rem !important;
+  text-transform: none !important;
+  letter-spacing: 1px !important;
+}
+
+/* "See All Features" Button Text - Cursive */
+.see-more-btn {
+  font-family: "Great Vibes", "Dancing Script", cursive !important;
+  font-weight: 400 !important;
+  font-size: 1.3rem !important;
+  text-transform: capitalize !important;
+}
+
+/* Bottom CTA "Ready to Start Planning?" - Cursive */
+.services-cta h2 {
+  font-family: "Great Vibes", "Dancing Script", cursive !important;
+  font-weight: 400 !important;
+  font-size: 4rem !important;
+  text-transform: none !important;
+  letter-spacing: 2px !important;
+  line-height: 1.2 !important;
+}
+
+/* Keep CTA paragraph normal */
+.services-cta p {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 1.3rem !important;
+}
+
+/* CTA Button - Keep readable */
+.services-cta .btn {
+  font-family: "Playfair Display", serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-overlay h3 {
+    font-size: 2rem !important;
+  }
+  
+  .services-cta h2 {
+    font-size: 2.5rem !important;
+  }
+  
+  .see-more-btn {
+    font-size: 1.1rem !important;
+  }
+}
