@@ -1,4 +1,3 @@
-/* Contact Page Styles */
 
 /* Hero Section */
 .contact-hero {
@@ -9,7 +8,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-  background-image: url('/public/banner.jpg');
+  background-image: url('/banner.jpg');
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -628,10 +627,14 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile adjustments */
+@media (max-width: 768px) {
   .contact-hero {
-    height: 40vh;
+    min-height: 80vh;
+    padding: 60px 15px 40px;
+    background-attachment: scroll !important;
   }
+  
 
   .contact-hero-title {
     font-size: 1.8rem;

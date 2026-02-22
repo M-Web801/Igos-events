@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-  background-image: url('/public/about.jpg');
+  background-image: url('/about.jpg');
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -753,11 +753,14 @@
     font-size: 1.1rem;
   }
 }
-
-@media (max-width: 480px) {
+/* Mobile adjustments */
+@media (max-width: 768px) {
   .services-hero {
-    height: 50vh;
+    min-height: 80vh;
+    padding: 60px 15px 40px;
+    background-attachment: scroll !important;
   }
+  
 
   .services-hero-title {
     font-size: 1.8rem;
