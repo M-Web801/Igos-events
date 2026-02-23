@@ -175,7 +175,8 @@ function Contact() {
       )}
 
       {/* Hero */}
-      <section className="contact-hero">
+      <section className="contact-hero"
+      style={{backgroundImage: 'url(/jap.jpg)'}}>
         <div className="contact-hero-overlay"></div>
         <div className="container">
           <h1 className="contact-hero-title">Let's Plan Your Dream Event</h1>

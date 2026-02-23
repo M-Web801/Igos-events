@@ -256,7 +256,8 @@ function Services() {
   return (
     <div className="services-page">
       {/* Hero */}
-      <section className="services-hero">
+      <section className="services-hero"
+        style={{backgroundImage: 'url(/about.jpg)'}}>
         <div className="services-hero-overlay"></div>
         <div className="container">
           <h1 className="page-title">Crafting Unforgettable Moments</h1>

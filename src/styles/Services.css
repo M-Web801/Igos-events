@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-  background-image: url('/about.jpg');
   border-radius: 20px;
   background-size: cover;
   background-position: center;
