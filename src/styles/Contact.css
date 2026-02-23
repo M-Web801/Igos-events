@@ -2,18 +2,19 @@
 /* Hero Section */
 .contact-hero {
   position: relative;
-  height: 50vh;
+  height: 60vh;
   min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-  background-image: url('/gallery/banner.jpg');
+  background-image: url('/banner.jpg');
   border-radius: 20px;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
+
 .hero-scroll {
   position: absolute;
   bottom: 30px;
@@ -630,11 +631,11 @@
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .contact-hero {
-    min-height: 80vh;
+    min-height: 50vh;
     padding: 60px 15px 40px;
     background-attachment: scroll !important;
   }
-  
+
 
   .contact-hero-title {
     font-size: 1.8rem;

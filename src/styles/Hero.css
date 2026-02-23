@@ -11,8 +11,8 @@
   border-radius: 10px;
   margin: 10px;
   overflow: hidden;
-  background-attachment: fixed;
-  padding: 80px 20px 60px; /* Add padding for mobile */
+  background-attachment: scroll;
+  padding: 80px 20px 60px; 
 }
 
 .hero-content {
@@ -177,7 +177,7 @@
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .hero {
-    min-height: 80vh;
+    min-height: 70vh;
     padding: 60px 15px 40px;
     background-attachment: scroll !important;
   }

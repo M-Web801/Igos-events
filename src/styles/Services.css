@@ -3,7 +3,7 @@
 .services-hero {
   position: relative;
   height: 60vh;
-  min-height: 400px;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,8 @@
   border-radius: 20px;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 .services-hero-overlay {
@@ -756,7 +757,7 @@
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .services-hero {
-    min-height: 80vh;
+    min-height: 60vh;
     padding: 60px 15px 40px;
     background-attachment: scroll !important;
   }
