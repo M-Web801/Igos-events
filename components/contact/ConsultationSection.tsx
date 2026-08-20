@@ -282,7 +282,7 @@ export default function ConsultationSection() {
                 href="mailto:igosevents1@gmail.com"
                 className="text-sm text-secondary transition-colors hover:text-primary"
               >
-                info@igosevents.com.ng
+                igosevents1@gmail.com
               </a>
             </div>
 
