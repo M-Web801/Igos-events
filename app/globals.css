@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+/* ================================
+   IGOS EVENTS DESIGN TOKENS
+================================ */
+
+:root {
+  /* Brand Colors */
+  --background: #faf8f5;
+  --foreground: #2b2622;
+
+  --primary: #8b6b2e;
+  --primary-container: #e8d6b5;
+
+  --secondary: #6a5c4d;
+
+  --surface: #ffffff;
+  --surface-variant: #f1ece5;
+
+  --accent: #5b4634;
+
+  --error: #b3261e;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+
+  --color-secondary: var(--secondary);
+
+  --color-surface: var(--surface);
+  --color-surface-variant: var(--surface-variant);
+
+  --color-accent: var(--accent);
+
+  --color-error: var(--error);
+
+  /* Typography */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-quote: var(--font-quote);
+  --font-signature: var(--font-signature);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  transition: 300ms ease;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fade {
+  animation: fade 6s ease-in-out;
+}
+
+/* Typography Utility Classes */
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-quote {
+  font-family: var(--font-quote);
+}
+
+.font-signature {
+  font-family: var(--font-signature);
+}
+@keyframes menuFade {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-menu {
+  animation: menuFade 0.3s ease-out;
+}
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-heroZoom {
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
+a {
+  transition: 300ms ease;
+}
+/* ================================
+   Response Banner Marquee
+================================ */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.response-marquee {
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+.response-marquee:hover {
+  animation-play-state: paused;
+}
